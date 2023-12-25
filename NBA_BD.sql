@@ -1660,3 +1660,5 @@ INSERT INTO TransmisionesPartidos (idPartido, idCanalDetransmisión) VALUES  ('1
 INSERT INTO TransmisionesPartidos (idPartido, idCanalDetransmisión) VALUES  ('18', '1');
 INSERT INTO TransmisionesPartidos (idPartido, idCanalDetransmisión) VALUES  ('19', '2');
 INSERT INTO TransmisionesPartidos (idPartido, idCanalDetransmisión) VALUES  ('20', '3');
+
+$$LANGUAGE plpgsql;
