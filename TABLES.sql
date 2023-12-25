@@ -313,3 +313,5 @@ CREATE TABLE TransmisionesPartidos (
 	FOREIGN KEY (idPartido) REFERENCES Partidos(idPartido),
 	FOREIGN KEY (idCanalDeTransmisión) REFERENCES CanalesDeTransmisión(idCanalDeTransmisión)
 );
+
+$$LANGUAGE plpgsql;
