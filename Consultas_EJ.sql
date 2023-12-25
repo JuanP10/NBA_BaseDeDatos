@@ -17,6 +17,37 @@ FROM Jugadores
 LEFT JOIN PremiosJugadores ON Jugadores.idPersona = PremiosJugadores.idJugador
 LEFT JOIN Premios ON PremiosJugadores.idPremio = Premios.idPremio;
 
+--información sobre el jugador y sus premios--
+
+CREATE OR REPLACE FUNCTION obtenerInfoJugadorConPremios(idJugador_param INT)
+RETURNS TABLE (
+    nombre_jugador VARCHAR(100),
+    fecha_nacimiento DATE,
+    altura DECIMAL(5, 2),
+    peso DECIMAL(5, 2),
+    premios_obtenidos VARCHAR(255)
+)
+AS $$
+BEGIN
+    RETURN QUERY
+    SELECT
+        Jugadores.nombre,
+        Jugadores.fechaDeNacimiento,
+        Jugadores.altura,
+        Jugadores.peso,
+        COALESCE(string_agg(Premios.descripcion, ', '), 'Sin premios') AS premios_obtenidos
+    FROM
+        Jugadores
+    LEFT JOIN
+        PremiosJugadores ON Jugadores.idPersona = PremiosJugadores.idJugador
+    LEFT JOIN
+        Premios ON PremiosJugadores.idPremio = Premios.idPremio
+    WHERE
+        Jugadores.idPersona = idJugador_param
+    GROUP BY
+        Jugadores.nombre, Jugadores.fechaDeNacimiento, Jugadores.altura, Jugadores.peso;
+END;
+
 $$LANGUAGE plpgsql;
 
 
