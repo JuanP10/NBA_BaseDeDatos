@@ -1,15 +1,15 @@
-//
+--
 
 INSERT INTO Fases (idFase, nombre) VALUES  (1, 'Play-off');
 INSERT INTO Fases (idFase, nombre) VALUES  (2, 'Play-in');
 INSERT INTO Fases (idFase, nombre) VALUES  (3, 'Regular');
 
-//
+--
 
 INSERT INTO Conferencias (idConferencia, nombre) VALUES  (1, 'Este');
 INSERT INTO Conferencias (idConferencia, nombre) VALUES  (2, 'Oeste');
 
-//
+--
 
 INSERT INTO Divisiones (idDivisión, nombre, idConferencia) VALUES  (1, 'Atlántico', '1');
 INSERT INTO Divisiones (idDivisión, nombre, idConferencia) VALUES  (2, 'Noroeste', '2');
@@ -18,12 +18,12 @@ INSERT INTO Divisiones (idDivisión, nombre, idConferencia) VALUES  (4, 'Pacífi
 INSERT INTO Divisiones (idDivisión, nombre, idConferencia) VALUES  (5, 'Sureste', '1');
 INSERT INTO Divisiones (idDivisión, nombre, idConferencia) VALUES  (6, 'Suroeste', '2');
 
-//
+--
 
 INSERT INTO TiposDeCanales (idTipoDeCanal, nombre) VALUES  (1, 'Televisión');
 INSERT INTO TiposDeCanales (idTipoDeCanal, nombre) VALUES  (2, 'Online');
 
-//
+--
 
 INSERT INTO CanalesDeTransmisión (idCanalDeTransmisión, nombre, idTipoDeCanal) VALUES  (1, 'ESPN', '1');
 INSERT INTO CanalesDeTransmisión (idCanalDeTransmisión, nombre, idTipoDeCanal) VALUES  (2, 'Star+', '2');
@@ -33,9 +33,9 @@ INSERT INTO CanalesDeTransmisión (idCanalDeTransmisión, nombre, idTipoDeCanal)
 INSERT INTO CanalesDeTransmisión (idCanalDeTransmisión, nombre, idTipoDeCanal) VALUES  (6, 'TUDN', '1');
 INSERT INTO CanalesDeTransmisión (idCanalDeTransmisión, nombre, idTipoDeCanal) VALUES  (7, 'Movistar+', '1');
 
-//
+--
 
- INSERT INTO Estados (idEstado, nombre) VALUES  (1, 'Massachusetts');
+INSERT INTO Estados (idEstado, nombre) VALUES  (1, 'Massachusetts');
 INSERT INTO Estados (idEstado, nombre) VALUES  (2, 'New York');
 INSERT INTO Estados (idEstado, nombre) VALUES  (3, 'Illinois');
 INSERT INTO Estados (idEstado, nombre) VALUES  (4, 'Wisconsin');
@@ -48,7 +48,7 @@ INSERT INTO Estados (idEstado, nombre) VALUES  (10, 'Florida');
 INSERT INTO Estados (idEstado, nombre) VALUES  (11, 'Luisiana');
 INSERT INTO Estados (idEstado, nombre) VALUES  (12, 'Texas');
 
-//
+--
 
 INSERT INTO Premios (idPremio, nombre) VALUES  (1, 'Magic Johnson');
 INSERT INTO Premios (idPremio, nombre) VALUES  (2, 'Jugador más deportivo');
@@ -57,7 +57,7 @@ INSERT INTO Premios (idPremio, nombre) VALUES  (4, 'Mejor defensor');
 INSERT INTO Premios (idPremio, nombre) VALUES  (5, 'Star Game');
 INSERT INTO Premios (idPremio, nombre) VALUES  (6, 'MVP');
 
-// 
+-- 
 
 INSERT INTO Países (idPaís, nombre) VALUES  (1, 'Venezuela');
 INSERT INTO Países (idPaís, nombre) VALUES  (2, 'Uruguay');
@@ -141,7 +141,7 @@ INSERT INTO Países (idPaís, nombre) VALUES  (79, 'Argentina');
 INSERT INTO Países (idPaís, nombre) VALUES  (80, 'Angola');
 INSERT INTO Países (idPaís, nombre) VALUES  (81, 'Alemania');
 
-// 
+-- 
 
 INSERT INTO Ciudades (idCiudad, nombre, idPaís, idEstado) VALUES  (1, 'Boston', '3', '1');
 INSERT INTO Ciudades (idCiudad, nombre, idPaís, idEstado) VALUES  (2, 'New York', '7', '7');
@@ -186,7 +186,7 @@ INSERT INTO Ciudades (idCiudad, nombre, idPaís, idEstado) VALUES  (40, 'Toulous
 INSERT INTO Ciudades (idCiudad, nombre, idPaís, idEstado) VALUES  (41, 'Sanshui', '13', '6');
 INSERT INTO Ciudades (idCiudad, nombre, idPaís, idEstado) VALUES  (42, 'Niza', '3', '5');
 
-//
+--
 
 INSERT INTO Posiciones (idPosición, nombre) VALUES  (1, 'Base');
 INSERT INTO Posiciones (idPosición, nombre) VALUES  (2, 'Escolta');
@@ -194,7 +194,7 @@ INSERT INTO Posiciones (idPosición, nombre) VALUES  (3, 'Alero');
 INSERT INTO Posiciones (idPosición, nombre) VALUES  (4, 'Ala-Pivot');
 INSERT INTO Posiciones (idPosición, nombre) VALUES  (5, 'Pivot');
 
-//
+--
 
 INSERT INTO TiposDeFaltas (idTipoDeFalta, nombre) VALUES  (1, 'Personal');
 INSERT INTO TiposDeFaltas (idTipoDeFalta, nombre) VALUES  (2, 'En ataque');
@@ -202,19 +202,19 @@ INSERT INTO TiposDeFaltas (idTipoDeFalta, nombre) VALUES  (3, 'Descalificante');
 INSERT INTO TiposDeFaltas (idTipoDeFalta, nombre) VALUES  (4, 'Técnica');
 INSERT INTO TiposDeFaltas (idTipoDeFalta, nombre) VALUES  (5, 'Antideportiva');
 
-//
+--
 
 INSERT INTO TiposDeAnotación (idTipoDeAnotación, nombre, puntos) VALUES  (1, 'Tiro libre', 1);
 INSERT INTO TiposDeAnotación (idTipoDeAnotación, nombre, puntos) VALUES  (2, 'Tiro de campo en línea', 2);
 INSERT INTO TiposDeAnotación (idTipoDeAnotación, nombre, puntos) VALUES  (3, 'Tiro de campo fuera de línea', 3);
 
-//
+--
 
 INSERT INTO TiposDeTraspasos (idTipoDeTraspaso, nombre) VALUES  (1, 'Compra');
 INSERT INTO TiposDeTraspasos (idTipoDeTraspaso, nombre) VALUES  (2, 'Intercambio');
 INSERT INTO TiposDeTraspasos (idTipoDeTraspaso, nombre) VALUES  (3, 'Regreso');
 
-//
+--
 
 INSERT INTO Instituciones (idInstitución, nombre, idCiudad) VALUES  (1, 'Toughjoyfax', '23');
 INSERT INTO Instituciones (idInstitución, nombre, idCiudad) VALUES  (2, 'Sonsing', '5');
@@ -237,7 +237,7 @@ INSERT INTO Instituciones (idInstitución, nombre, idCiudad) VALUES  (18, 'Strin
 INSERT INTO Instituciones (idInstitución, nombre, idCiudad) VALUES  (19, 'Wrapsafe', '22');
 INSERT INTO Instituciones (idInstitución, nombre, idCiudad) VALUES  (20, 'Voyatouch', '8');
 
-//
+--
 
 INSERT INTO Personas (idPersona, primerNombre, segundoNombre, primerApellido, segundoApellido) VALUES  (1, 'Salvatore', 'Ritchie', 'Dinjes', 'Tylor');
 INSERT INTO Personas (idPersona, primerNombre, segundoNombre, primerApellido, segundoApellido) VALUES  (2, 'Waring', 'Rollins', 'McGahern', 'Ramelot');
@@ -386,7 +386,7 @@ INSERT INTO Personas (idPersona, primerNombre, segundoNombre, primerApellido, se
 INSERT INTO Personas (idPersona, primerNombre, segundoNombre, primerApellido, segundoApellido) VALUES  (145, 'Raynor', 'Shamus', 'Bett', 'O''Shee');
 INSERT INTO Personas (idPersona, primerNombre, segundoNombre, primerApellido, segundoApellido) VALUES  (146, 'Taylor', 'null', 'Collyns', 'Wild');
 
-//
+--
 
 INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia) VALUES  ('1', 185, 81.8, '3/8/1991', '3', '1');
 INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia) VALUES  ('2', 203, 97.2, '10/4/1994' , '4', '12');
@@ -405,7 +405,7 @@ INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición,
 INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia) VALUES ('15', 217, 108.9, TO_DATE('30/8/1997', 'DD/MM/YYYY'), '1', '14');
 INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia) VALUES ('16', 186, 134.2, TO_DATE('1/10/2001', 'DD/MM/YYYY'), '2', '5');
 
-//
+--
 
 INSERT INTO Pruebas (idPrueba, nombre) VALUES  (1, 'Salto vertical de pie');
 INSERT INTO Pruebas (idPrueba, nombre) VALUES  (2, 'Salto vertical máximo');
@@ -514,7 +514,7 @@ INSERT INTO Patrocinadores (idPatrocinador, nombre, idPaísProcedencia) VALUES  
 INSERT INTO Patrocinadores (idPatrocinador, nombre, idPaísProcedencia) VALUES  (14, 'Home Ing', '20');
 INSERT INTO Patrocinadores (idPatrocinador, nombre, idPaísProcedencia) VALUES  (15, 'Bitwolf', '18');
 
-//
+--
 
 INSERT INTO Árbitros (idPersona) VALUES  (17);
 INSERT INTO Árbitros (idPersona) VALUES  (18);
@@ -528,7 +528,7 @@ INSERT INTO Árbitros (idPersona) VALUES  (25);
 INSERT INTO Árbitros (idPersona) VALUES  (26);
 INSERT INTO Árbitros (idPersona) VALUES  (146);
 
-//
+--
 
 INSERT INTO Estadios (idEstadio, nombre, dirección, capacidad, idCiudad) VALUES  (1, 'TD Garden', '4855 Randy Lane', 19670, '1');
 INSERT INTO Estadios (idEstadio, nombre, dirección, capacidad, idCiudad) VALUES  (2, 'Barclays Center', '838 Barby Drive', 17079, '2');
@@ -543,7 +543,7 @@ INSERT INTO Estadios (idEstadio, nombre, dirección, capacidad, idCiudad) VALUES
 INSERT INTO Estadios (idEstadio, nombre, dirección, capacidad, idCiudad) VALUES  (11, 'Smoothie King Center', '3 Stone Corner Pass', 12154, '11');
 INSERT INTO Estadios (idEstadio, nombre, dirección, capacidad, idCiudad) VALUES  (12, 'American Airlines Center', '04 Lakeland Avenue', 17312, '12');
 
-//
+--
 
 INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador) VALUES (1, 'Celtics', TO_DATE('26/12/1974', 'DD/MM/YYYY'), '18', '1', '1', '5');
 INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador) VALUES (2, 'Nuggets', TO_DATE('03/06/1961', 'DD/MM/YYYY'), '6', '2', '2', '8');
@@ -558,7 +558,7 @@ INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión,
 INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador) VALUES (11, 'Heat', TO_DATE('08/11/1958', 'DD/MM/YYYY'), '17', '5', '11', '1');
 INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador) VALUES (12, 'Mavericks', TO_DATE('20/12/1966', 'DD/MM/YYYY'), '30', '6', '12', '2');
 
-//
+--
 
 INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES (1, '1', '1', '10', TO_DATE('11/11/2021', 'DD/MM/YYYY'), '20:47:13', '21:47:13', '1');
 INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES (2, '2', '2', '8', TO_DATE('29/12/2021', 'DD/MM/YYYY'), '21:40:51', '22:40:51', '2');
@@ -621,7 +621,7 @@ INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fe
 INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES (59, '11', '11', '12', TO_DATE('25/03/2022', 'DD/MM/YYYY'), '23:18:45', '23:18:45', '2');
 INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES (60, '12', '12', '2', TO_DATE('04/01/2022', 'DD/MM/YYYY'), '22:19:25', '23:19:25', '3');
 
-//
+--
 
 INSERT INTO ParticipacionesÁrbitros (idPartido, idÁrbitro) VALUES  ('1', '17');
 INSERT INTO ParticipacionesÁrbitros (idPartido, idÁrbitro) VALUES  ('2', '18');
@@ -723,11 +723,11 @@ INSERT INTO ParticipacionesÁrbitros (idPartido, idÁrbitro) VALUES  ('37', '25'
 INSERT INTO ParticipacionesÁrbitros (idPartido, idÁrbitro) VALUES  ('38', '26');
 INSERT INTO ParticipacionesÁrbitros (idPartido, idÁrbitro) VALUES  ('39', '146');
 
-//
+--
 
 INSERT INTO EventoDeReclutamiento (idEventoDeReclutamiento, fechaRealización) VALUES  (1, '04/09/2021');
 
-//
+--
 
 INSERT INTO Reclutamientos (idCandidato, idEquipo, ronda, selección, idEventoDeReclutamiento) VALUES  ('12', 1, 1, 1, '1');
 INSERT INTO Reclutamientos (idCandidato, idEquipo, ronda, selección, idEventoDeReclutamiento) VALUES  ('7', 8, 1, 2, '1');
@@ -742,7 +742,7 @@ INSERT INTO Reclutamientos (idCandidato, idEquipo, ronda, selección, idEventoDe
 INSERT INTO Reclutamientos (idCandidato, idEquipo, ronda, selección, idEventoDeReclutamiento) VALUES  ('13', 7, 2, 5, '1');
 INSERT INTO Reclutamientos (idCandidato, idEquipo, ronda, selección, idEventoDeReclutamiento) VALUES  ('1', 8, 2, 6, '1');
 
-//
+--
 
 INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (27, 48, TO_DATE('06/03/2000', 'DD/MM/YYYY'), 186, 130.1, TO_DATE('06/03/2019', 'DD/MM/YYYY'), null, '12', '5', '1', '1');
 INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (28, 59, TO_DATE('18/06/1997', 'DD/MM/YYYY'), 218, 87.3, TO_DATE('18/06/2016', 'DD/MM/YYYY'), null, '6', '25', '2', '2');
@@ -820,7 +820,7 @@ INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fecha
 INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (101, 22, TO_DATE('06/05/2000', 'DD/MM/YYYY'), 190, 124.6, TO_DATE('06/05/2019', 'DD/MM/YYYY'), TO_DATE('17/06/2022', 'DD/MM/YYYY'), '4', '29', '4', '2');
 INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (102, 23, TO_DATE('15/06/1999', 'DD/MM/YYYY'), 191, 159.3, TO_DATE('15/06/2018', 'DD/MM/YYYY'), TO_DATE('26/07/2022', 'DD/MM/YYYY'), '12', '22', '5', '3');
 
-//
+--
 
 INSERT INTO Patrocinios (idPatrocinador, idJugador, fechaInicio, fechaFinalización) VALUES  ('2', 86, '2019-05-12', '2019-12-12');
 INSERT INTO Patrocinios (idPatrocinador, idJugador, fechaInicio, fechaFinalización) VALUES  ('4', 27, '2018-09-07', '2019-08-07');
@@ -855,7 +855,7 @@ INSERT INTO Patrocinios (idPatrocinador, idJugador, fechaInicio, fechaFinalizaci
 INSERT INTO Patrocinios (idPatrocinador, idJugador, fechaInicio, fechaFinalización) VALUES  ('5', 51, '2017-10-28', '2019-08-28');
 INSERT INTO Patrocinios (idPatrocinador, idJugador, fechaInicio, fechaFinalización) VALUES  ('2', 55, '2020-02-06', '2020-08-06');
 
-//
+--
 
 INSERT INTO Faltas (idFalta, idJugador, idÁrbitro, idPartido, idTipoDeFalta, tiempo) VALUES  (1, '40', '23', '2', '2', 3);
 INSERT INTO Faltas (idFalta, idJugador, idÁrbitro, idPartido, idTipoDeFalta, tiempo) VALUES  (2, '82', '25', '8', '4', 2);
@@ -878,7 +878,7 @@ INSERT INTO Faltas (idFalta, idJugador, idÁrbitro, idPartido, idTipoDeFalta, ti
 INSERT INTO Faltas (idFalta, idJugador, idÁrbitro, idPartido, idTipoDeFalta, tiempo) VALUES  (19, '67', '18', '56', '3', 3);
 INSERT INTO Faltas (idFalta, idJugador, idÁrbitro, idPartido, idTipoDeFalta, tiempo) VALUES  (20, '78', '17', '31', '4', 3);
 
-//
+--
 
 INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES (1, '3', '6', '11', '49', TO_DATE('08/02/2022', 'DD/MM/YYYY'));
 INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES (2, '2', '4', '10', '72', TO_DATE('20/02/2022', 'DD/MM/YYYY'));
@@ -896,7 +896,7 @@ INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquip
 INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES (14, '1', '4', '11', '73', TO_DATE('19/03/2022', 'DD/MM/YYYY'));
 INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES (15, '3', '3', '5', '43', TO_DATE('12/11/2021', 'DD/MM/YYYY'));
 
-//
+--
 
 INSERT INTO PremiosJugadores (idJugador, idPremio, fechaDeRecibimiento) VALUES ('42', '1', TO_DATE('23/11/2021', 'DD/MM/YYYY'));
 INSERT INTO PremiosJugadores (idJugador, idPremio, fechaDeRecibimiento) VALUES ('37', '2', TO_DATE('07/06/2022', 'DD/MM/YYYY'));
@@ -905,7 +905,7 @@ INSERT INTO PremiosJugadores (idJugador, idPremio, fechaDeRecibimiento) VALUES (
 INSERT INTO PremiosJugadores (idJugador, idPremio, fechaDeRecibimiento) VALUES ('39', '5', TO_DATE('11/11/2021', 'DD/MM/YYYY'));
 INSERT INTO PremiosJugadores (idJugador, idPremio, fechaDeRecibimiento) VALUES ('71', '6', TO_DATE('08/12/2021', 'DD/MM/YYYY'));
 
-//
+--
 
 INSERT INTO Anotaciones (idAnotación, idJugador, idTipoDeAnotación, idPartido, minuto, intento) VALUES  (1, '45', '1', '1', '0:08:15',FALSE);
 INSERT INTO Anotaciones (idAnotación, idJugador, idTipoDeAnotación, idPartido, minuto, intento) VALUES  (2, '85', '3', '2', '0:19:13',FALSE);
@@ -1088,7 +1088,7 @@ INSERT INTO Anotaciones (idAnotación, idJugador, idTipoDeAnotación, idPartido,
 INSERT INTO Anotaciones (idAnotación, idJugador, idTipoDeAnotación, idPartido, minuto, intento) VALUES  (179, '84', '1', '59', '0:30:57',FALSE);
 INSERT INTO Anotaciones (idAnotación, idJugador, idTipoDeAnotación, idPartido, minuto, intento) VALUES  (180, '68', '2', '60', '0:17:04',FALSE);
 
-//
+--
 
 INSERT INTO Entrenadores (idPersona, esEntrenadorPrincipal, idEquipo) VALUES  (103,TRUE, '1');
 INSERT INTO Entrenadores (idPersona, esEntrenadorPrincipal, idEquipo) VALUES  (104,FALSE, '2');
@@ -1103,7 +1103,7 @@ INSERT INTO Entrenadores (idPersona, esEntrenadorPrincipal, idEquipo) VALUES  (1
 INSERT INTO Entrenadores (idPersona, esEntrenadorPrincipal, idEquipo) VALUES  (113,FALSE, '11');
 INSERT INTO Entrenadores (idPersona, esEntrenadorPrincipal, idEquipo) VALUES  (114,TRUE, '12');
 
-//
+--
 
 INSERT INTO Asistentes (idAsistente, idEntrenador) VALUES  (115, '103');
 INSERT INTO Asistentes (idAsistente, idEntrenador) VALUES  (116, '104');
@@ -1126,7 +1126,7 @@ INSERT INTO Asistentes (idAsistente, idEntrenador) VALUES  (132, '108');
 INSERT INTO Asistentes (idAsistente, idEntrenador) VALUES  (133, '109');
 INSERT INTO Asistentes (idAsistente, idEntrenador) VALUES  (134, '110');
 
-// 
+-- 
 
 INSERT INTO Propietarios (idPropietario, idEquipo) VALUES  (135, '11');
 INSERT INTO Propietarios (idPropietario, idEquipo) VALUES  (136, '9');
@@ -1141,7 +1141,7 @@ INSERT INTO Propietarios (idPropietario, idEquipo) VALUES  (144, '3');
 INSERT INTO Propietarios (idPropietario, idEquipo) VALUES  (145, '6');
 INSERT INTO Propietarios (idPropietario, idEquipo) VALUES  (146, '10');
 
-//
+--
 
 INSERT INTO TransmisionesPartidos (idPartido, idCanalDetransmisión) VALUES  ('1', '1');
 INSERT INTO TransmisionesPartidos (idPartido, idCanalDetransmisión) VALUES  ('2', '2');
