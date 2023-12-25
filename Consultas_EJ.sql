@@ -17,5 +17,8 @@ FROM Jugadores
 LEFT JOIN PremiosJugadores ON Jugadores.idPersona = PremiosJugadores.idJugador
 LEFT JOIN Premios ON PremiosJugadores.idPremio = Premios.idPremio;
 
+$$LANGUAGE plpgsql;
+
+
 
 
