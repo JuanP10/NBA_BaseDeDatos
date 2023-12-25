@@ -459,7 +459,7 @@ INSERT INTO Personas (idPersona, primerNombre, segundoNombre, primerApellido, se
 
 CREATE TABLE Candidatos (
 	idCandidato INTEGER NOT NULL PRIMARY KEY,
-	altura VARCHAR(255) NOT NULL,
+	altura DECIMAL (255) NOT NULL,
 	peso DECIMAL NOT NULL,
 	fechaNacimiento DATE NOT NULL,
 	idPosición INTEGER NOT NULL,
@@ -470,21 +470,48 @@ CREATE TABLE Candidatos (
 );
 
 INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia) VALUES  ('1', 185, 81.8, '3/8/1991', '3', '1');
-INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia) VALUES  ('2', 203, 97.2, '26/4/1994', '4', '12');
-INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia) VALUES  ('3', 191, 162.3, '7/6/2001', '5', '11');
-INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia) VALUES  ('4', 196, 123.4, '28/6/2000', '2', '3');
-INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia) VALUES  ('5', 203, 145.6, '25/5/1993', '1', '9');
-INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia) VALUES  ('6', 197, 113.0, '29/12/1999', '4', '13');
-INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia) VALUES  ('7', 203, 141.8, '2/7/1998', '3', '8');
-INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia) VALUES  ('8', 215, 156.8, '15/5/1994', '5', '6');
-INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia) VALUES  ('9', 209, 103.0, '7/10/1999', '2', '15');
-INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia) VALUES  ('10', 186, 115.8, '20/9/1999', '1', '10');
-INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia) VALUES  ('11', 205, 107.3, '5/9/2003', '3', '5');
-INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia) VALUES  ('12', 200, 137.4, '22/9/1998', '4', '4');
-INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia) VALUES  ('13', 218, 110.8, '26/10/2000', '2', '7');
-INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia) VALUES  ('14', 184, 162.2, '25/12/1998', '5', '2');
-INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia) VALUES  ('15', 217, 108.9, '30/8/1997', '1', '14');
-INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia) VALUES  ('16', 186, 134.2, '1/10/2001', '2', '5');
+INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia) VALUES  ('2', 203, 97.2, '10/4/1994' , '4', '12');
+INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia)
+VALUES ('3', 191, 162.3, TO_DATE('7/6/2001', 'DD/MM/YYYY'), '5', '11');
+
+INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia)
+VALUES ('4', 196, 123.4, TO_DATE('28/6/2000', 'DD/MM/YYYY'), '2', '3');
+
+INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia)
+VALUES ('5', 203, 145.6, TO_DATE('25/5/1993', 'DD/MM/YYYY'), '1', '9');
+
+INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia)
+VALUES ('6', 197, 113.0, TO_DATE('29/12/1999', 'DD/MM/YYYY'), '4', '13');
+
+INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia)
+VALUES ('7', 203, 141.8, TO_DATE('2/7/1998', 'DD/MM/YYYY'), '3', '8');
+
+INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia)
+VALUES ('8', 215, 156.8, TO_DATE('15/5/1994', 'DD/MM/YYYY'), '5', '6');
+
+INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia)
+VALUES ('9', 209, 103.0, TO_DATE('7/10/1999', 'DD/MM/YYYY'), '2', '15');
+
+INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia)
+VALUES ('10', 186, 115.8, TO_DATE('20/9/1999', 'DD/MM/YYYY'), '1', '10');
+
+INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia)
+VALUES ('11', 205, 107.3, TO_DATE('5/9/2003', 'DD/MM/YYYY'), '3', '5');
+
+INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia)
+VALUES ('12', 200, 137.4, TO_DATE('22/9/1998', 'DD/MM/YYYY'), '4', '4');
+
+INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia)
+VALUES ('13', 218, 110.8, TO_DATE('26/10/2000', 'DD/MM/YYYY'), '2', '7');
+
+INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia)
+VALUES ('14', 184, 162.2, TO_DATE('25/12/1998', 'DD/MM/YYYY'), '5', '2');
+
+INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia)
+VALUES ('15', 217, 108.9, TO_DATE('30/8/1997', 'DD/MM/YYYY'), '1', '14');
+
+INSERT INTO Candidatos (idCandidato, altura, peso, fechaNacimiento, idPosición, idInstituciónProcedencia)
+VALUES ('16', 186, 134.2, TO_DATE('1/10/2001', 'DD/MM/YYYY'), '2', '5');
 
 
 CREATE TABLE Pruebas (
@@ -674,18 +701,41 @@ FOREIGN KEY (idEstadioDueño) REFERENCES Estadios(idEstadio),
 FOREIGN KEY (idPatrocinador) REFERENCES Patrocinadores(idPatrocinador)
 );
 
-INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador) VALUES  (1, 'Celtics', '26/12/1974', '18', '1', '1', '5');
-INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador) VALUES  (2, 'Nuggets', '03/06/1961', '6', '2', '2', '8');
-INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador) VALUES  (3, 'Bulls', '26/05/2008', '15', '3', '3', '1');
-INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador) VALUES  (4, 'Clippers', '13/02/1992', '7', '4', '4', '4');
-INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador) VALUES  (5, 'Hawks', '04/03/2006', '25', '5', '5', '9');
-INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador) VALUES  (6, 'Pelicans', '22/08/1989', '9', '6', '6', '2');
-INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador) VALUES  (7, 'Nets', '09/11/1957', '5', '1', '7', '3');
-INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador) VALUES  (8, 'Timberwolves', '31/01/1972', '1', '2', '8', '10');
-INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador) VALUES  (9, 'Bucks', '25/09/1964', '26', '3', '9', '7');
-INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador) VALUES  (10, 'Suns', '24/08/1958', '13', '4', '10', '6');
-INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador) VALUES  (11, 'Heat', '08/11/1958', '17', '5', '11', '1');
-INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador) VALUES  (12, 'Mavericks', '20/12/1966', '30', '6', '12', '2');
+INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador)
+VALUES (1, 'Celtics', TO_DATE('26/12/1974', 'DD/MM/YYYY'), '18', '1', '1', '5');
+
+INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador)
+VALUES (2, 'Nuggets', TO_DATE('03/06/1961', 'DD/MM/YYYY'), '6', '2', '2', '8');
+
+INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador)
+VALUES (3, 'Bulls', TO_DATE('26/05/2008', 'DD/MM/YYYY'), '15', '3', '3', '1');
+
+INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador)
+VALUES (4, 'Clippers', TO_DATE('13/02/1992', 'DD/MM/YYYY'), '7', '4', '4', '4');
+
+INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador)
+VALUES (5, 'Hawks', TO_DATE('04/03/2006', 'DD/MM/YYYY'), '25', '5', '5', '9');
+
+INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador)
+VALUES (6, 'Pelicans', TO_DATE('22/08/1989', 'DD/MM/YYYY'), '9', '6', '6', '2');
+
+INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador)
+VALUES (7, 'Nets', TO_DATE('09/11/1957', 'DD/MM/YYYY'), '5', '1', '7', '3');
+
+INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador)
+VALUES (8, 'Timberwolves', TO_DATE('31/01/1972', 'DD/MM/YYYY'), '1', '2', '8', '10');
+
+INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador)
+VALUES (9, 'Bucks', TO_DATE('25/09/1964', 'DD/MM/YYYY'), '26', '3', '9', '7');
+
+INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador)
+VALUES (10, 'Suns', TO_DATE('24/08/1958', 'DD/MM/YYYY'), '13', '4', '10', '6');
+
+INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador)
+VALUES (11, 'Heat', TO_DATE('08/11/1958', 'DD/MM/YYYY'), '17', '5', '11', '1');
+
+INSERT INTO Equipos (idEquipo, nombre, FechaDeFundación, idCiudad, idDivisión, idEstadioDueño, idPatrocinador)
+VALUES (12, 'Mavericks', TO_DATE('20/12/1966', 'DD/MM/YYYY'), '30', '6', '12', '2');
 
 CREATE TABLE Partidos (
 	idPartido INTEGER NOT NULL PRIMARY KEY,
@@ -703,66 +753,184 @@ FOREIGN KEY (idEstadio) REFERENCES Estadios(idEstadio),
 FOREIGN KEY (idFase) REFERENCES Fases(idFase)
 );
 
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (1, '1', '1', '10', '11/11/2021', '20:47:13', '21:47:13', '1');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (2, '2', '2', '8', '29/12/2021', '21:40:51', '22:40:51', '2');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (3, '3', '3', '6', '19/02/2022', '19:31:56', '20:31:56', '3');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (4, '4', '4', '4', '27/04/2022', '19:15:31', '20:15:31', '1');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (5, '5', '5', '1', '21/10/2021', '19:09:39', '20:09:39', '2');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (6, '6', '6', '12', '14/12/2021', '22:51:59', '23:51:59', '3');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (7, '7', '7', '11', '23/05/2022', '20:31:18', '21:31:18', '1');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (8, '8', '8', '5', '17/02/2022', '23:09:06', '00:09:06', '2');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (9, '9', '9', '2', '27/05/2022', '20:11:38', '21:11:38', '3');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (10, '10', '10', '3', '04/05/2022', '20:24:31', '21:24:31', '1');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (11, '11', '11', '7', '15/02/2022', '20:21:02', '21:21:02', '2');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (12, '12', '12', '9', '17/12/2021', '19:37:09', '20:37:09', '3');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (13, '1', '1', '5', '06/12/2021', '21:13:38', '22:13:38', '1');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (14, '2', '2', '10', '18/12/2021', '19:06:57', '20:06:57', '2');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (15, '3', '3', '7', '06/11/2021', '22:37:02', '23:37:02', '3');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (16, '4', '4', '1', '06/05/2022', '23:13:42', '00:13:42', '1');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (17, '5', '5', '11', '13/06/2022', '23:13:14', '00:13:14', '2');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (18, '6', '6', '3', '07/04/2022', '23:02:53', '00:02:53', '3');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (19, '7', '7', '2', '12/06/2022', '20:31:37', '21:31:37', '1');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (20, '8', '8', '12', '02/06/2022', '19:32:05', '20:32:05', '2');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (21, '9', '9', '4', '04/11/2021', '21:53:33', '22:53:33', '3');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (22, '10', '10', '9', '08/04/2022', '19:13:49', '20:13:49', '1');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (23, '11', '11', '8', '22/01/2022', '20:53:52', '21:53:52', '2');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (24, '12', '12', '6', '29/11/2021', '19:13:13', '20:13:13', '3');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (25, '1', '1', '10', '09/04/2022', '23:20:00', '00:20:00', '1');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (26, '2', '2', '8', '02/11/2021', '21:31:22', '22:31:22', '2');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (27, '3', '3', '5', '01/05/2022', '19:48:50', '20:48:50', '3');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (28, '4', '4', '1', '05/05/2022', '19:12:44', '20:12:44', '1');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (29, '5', '5', '11', '29/05/2022', '22:22:20', '23:22:20', '2');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (30, '6', '6', '3', '30/03/2022', '20:15:21', '21:15:21', '3');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (31, '7', '7', '4', '27/10/2021', '19:17:23', '20:17:23', '1');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (32, '8', '8', '7', '29/01/2022', '22:26:12', '23:26:12', '2');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (33, '9', '9', '2', '27/11/2021', '22:31:53', '23:31:53', '3');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (34, '10', '10', '9', '31/01/2022', '22:47:27', '23:47:27', '1');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (35, '11', '11', '6', '20/03/2022', '20:42:34', '21:42:34', '2');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (36, '12', '12', '12', '03/12/2021', '19:56:07', '20:56:07', '3');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (37, '1', '1', '5', '18/04/2022', '19:41:57', '20:41:57', '1');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (38, '2', '2', '12', '17/03/2022', '20:47:00', '21:47:00', '2');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (39, '3', '3', '9', '15/02/2022', '20:06:59', '21:06:59', '3');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (40, '4', '4', '3', '10/11/2021', '20:37:06', '21:37:06', '1');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (41, '5', '5', '11', '13/05/2022', '20:18:28', '21:18:28', '2');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (42, '6', '6', '6', '18/04/2022', '20:59:22', '21:59:22', '3');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (43, '7', '7', '4', '17/05/2022', '22:06:40', '23:06:40', '1');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (44, '8', '8', '2', '27/10/2021', '20:13:28', '21:13:28', '2');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (45, '9', '9', '7', '03/04/2022', '20:17:04', '21:17:04', '3');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (46, '10', '10', '8', '14/04/2022', '21:12:43', '22:12:43', '1');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (47, '11', '11', '10', '23/01/2022', '21:57:59', '22:57:59', '2');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (48, '12', '12', '1', '05/11/2021', '20:30:12', '21:30:12', '3');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (49, '1', '1', '9', '03/02/2022', '22:40:46', '23:40:46', '1');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (50, '2', '2', '4', '03/06/2022', '19:51:20', '20:51:20', '2');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (51, '3', '3', '8', '29/10/2021', '19:58:58', '20:58:58', '3');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (52, '4', '4', '7', '28/11/2021', '21:47:31', '22:47:31', '1');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (53, '5', '5', '3', '25/04/2022', '21:06:50', '22:07:50', '2');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (54, '6', '6', '11', '22/12/2021', '20:16:26', '21:16:26', '3');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (55, '7', '7', '1', '01/01/2022', '20:47:07', '21:47:07', '1');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (56, '8', '8', '10', '29/10/2021', '21:03:40', '22:03:40', '2');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (57, '9', '9', '6', '12/05/2022', '19:12:35', '20:12:35', '3');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (58, '10', '10', '5', '12/01/2022', '23:08:59', '00:08:59', '1');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (59, '11', '11', '12', '25/03/2022', '23:18:45', '23:18:45', '2');
-INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase) VALUES  (60, '12', '12', '2', '04/01/2022', '22:19:25', '23:19:25', '3');
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (1, '1', '1', '10', TO_DATE('11/11/2021', 'DD/MM/YYYY'), '20:47:13', '21:47:13', '1');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (2, '2', '2', '8', TO_DATE('29/12/2021', 'DD/MM/YYYY'), '21:40:51', '22:40:51', '2');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (3, '3', '3', '6', TO_DATE('19/02/2022', 'DD/MM/YYYY'), '19:31:56', '20:31:56', '3');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (4, '4', '4', '4', TO_DATE('27/04/2022', 'DD/MM/YYYY'), '19:15:31', '20:15:31', '1');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (5, '5', '5', '1', TO_DATE('21/10/2021', 'DD/MM/YYYY'), '19:09:39', '20:09:39', '2');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (6, '6', '6', '12', TO_DATE('14/12/2021', 'DD/MM/YYYY'), '22:51:59', '23:51:59', '3');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (7, '7', '7', '11', TO_DATE('23/05/2022', 'DD/MM/YYYY'), '20:31:18', '21:31:18', '1');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (8, '8', '8', '5', TO_DATE('17/02/2022', 'DD/MM/YYYY'), '23:09:06', '00:09:06', '2');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (9, '9', '9', '2', TO_DATE('27/05/2022', 'DD/MM/YYYY'), '20:11:38', '21:11:38', '3');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (10, '10', '10', '3', TO_DATE('04/05/2022', 'DD/MM/YYYY'), '20:24:31', '21:24:31', '1');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (11, '11', '11', '7', TO_DATE('15/02/2022', 'DD/MM/YYYY'), '20:21:02', '21:21:02', '2');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (12, '12', '12', '9', TO_DATE('17/12/2021', 'DD/MM/YYYY'), '19:37:09', '20:37:09', '3');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (13, '1', '1', '5', TO_DATE('06/12/2021', 'DD/MM/YYYY'), '21:13:38', '22:13:38', '1');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (14, '2', '2', '10', TO_DATE('18/12/2021', 'DD/MM/YYYY'), '19:06:57', '20:06:57', '2');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (15, '3', '3', '7', TO_DATE('06/11/2021', 'DD/MM/YYYY'), '22:37:02', '23:37:02', '3');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (16, '4', '4', '1', TO_DATE('06/05/2022', 'DD/MM/YYYY'), '23:13:42', '00:13:42', '1');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (17, '5', '5', '11', TO_DATE('13/06/2022', 'DD/MM/YYYY'), '23:13:14', '00:13:14', '2');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (18, '6', '6', '3', TO_DATE('07/04/2022', 'DD/MM/YYYY'), '23:02:53', '00:02:53', '3');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (19, '7', '7', '2', TO_DATE('12/06/2022', 'DD/MM/YYYY'), '20:31:37', '21:31:37', '1');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (20, '8', '8', '12', TO_DATE('02/06/2022', 'DD/MM/YYYY'), '19:32:05', '20:32:05', '2');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (21, '9', '9', '4', TO_DATE('04/11/2021', 'DD/MM/YYYY'), '21:53:33', '22:53:33', '3');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (22, '10', '10', '9', TO_DATE('08/04/2022', 'DD/MM/YYYY'), '19:13:49', '20:13:49', '1');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (23, '11', '11', '8', TO_DATE('22/01/2022', 'DD/MM/YYYY'), '20:53:52', '21:53:52', '2');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (24, '12', '12', '6', TO_DATE('29/11/2021', 'DD/MM/YYYY'), '19:13:13', '20:13:13', '3');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (25, '1', '1', '10', TO_DATE('09/04/2022', 'DD/MM/YYYY'), '23:20:00', '00:20:00', '1');
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (26, '2', '2', '8', TO_DATE('02/11/2021', 'DD/MM/YYYY'), '21:31:22', '22:31:22', '2');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (27, '3', '3', '5', TO_DATE('01/05/2022', 'DD/MM/YYYY'), '19:48:50', '20:48:50', '3');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (28, '4', '4', '1', TO_DATE('05/05/2022', 'DD/MM/YYYY'), '19:12:44', '20:12:44', '1');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (29, '5', '5', '11', TO_DATE('29/05/2022', 'DD/MM/YYYY'), '22:22:20', '23:22:20', '2');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (30, '6', '6', '3', TO_DATE('30/03/2022', 'DD/MM/YYYY'), '20:15:21', '21:15:21', '3');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (31, '7', '7', '4', TO_DATE('27/10/2021', 'DD/MM/YYYY'), '19:17:23', '20:17:23', '1');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (32, '8', '8', '7', TO_DATE('29/01/2022', 'DD/MM/YYYY'), '22:26:12', '23:26:12', '2');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (33, '9', '9', '2', TO_DATE('27/11/2021', 'DD/MM/YYYY'), '22:31:53', '23:31:53', '3');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (34, '10', '10', '9', TO_DATE('31/01/2022', 'DD/MM/YYYY'), '22:47:27', '23:47:27', '1');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (35, '11', '11', '6', TO_DATE('20/03/2022', 'DD/MM/YYYY'), '20:42:34', '21:42:34', '2');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (36, '12', '12', '12', TO_DATE('03/12/2021', 'DD/MM/YYYY'), '19:56:07', '20:56:07', '3');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (37, '1', '1', '5', TO_DATE('18/04/2022', 'DD/MM/YYYY'), '19:41:57', '20:41:57', '1');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (38, '2', '2', '12', TO_DATE('17/03/2022', 'DD/MM/YYYY'), '20:47:00', '21:47:00', '2');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (39, '3', '3', '9', TO_DATE('15/02/2022', 'DD/MM/YYYY'), '20:06:59', '21:06:59', '3');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (40, '4', '4', '3', TO_DATE('10/11/2021', 'DD/MM/YYYY'), '20:37:06', '21:37:06', '1');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (41, '5', '5', '11', TO_DATE('13/05/2022', 'DD/MM/YYYY'), '20:18:28', '21:18:28', '2');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (42, '6', '6', '6', TO_DATE('18/04/2022', 'DD/MM/YYYY'), '20:59:22', '21:59:22', '3');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (43, '7', '7', '4', TO_DATE('17/05/2022', 'DD/MM/YYYY'), '22:06:40', '23:06:40', '1');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (44, '8', '8', '2', TO_DATE('27/10/2021', 'DD/MM/YYYY'), '20:13:28', '21:13:28', '2');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (45, '9', '9', '7', TO_DATE('03/04/2022', 'DD/MM/YYYY'), '20:17:04', '21:17:04', '3');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (46, '10', '10', '8', TO_DATE('14/04/2022', 'DD/MM/YYYY'), '21:12:43', '22:12:43', '1');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (47, '11', '11', '10', TO_DATE('23/01/2022', 'DD/MM/YYYY'), '21:57:59', '22:57:59', '2');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (48, '12', '12', '1', TO_DATE('05/11/2021', 'DD/MM/YYYY'), '20:30:12', '21:30:12', '3');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (49, '1', '1', '9', TO_DATE('03/02/2022', 'DD/MM/YYYY'), '22:40:46', '23:40:46', '1');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (50, '2', '2', '4', TO_DATE('03/06/2022', 'DD/MM/YYYY'), '19:51:20', '20:51:20', '2');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (51, '3', '3', '8', TO_DATE('29/10/2021', 'DD/MM/YYYY'), '19:58:58', '20:58:58', '3');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (52, '4', '4', '7', TO_DATE('28/11/2021', 'DD/MM/YYYY'), '21:47:31', '22:47:31', '1');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (53, '5', '5', '3', TO_DATE('25/04/2022', 'DD/MM/YYYY'), '21:06:50', '22:07:50', '2');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (54, '6', '6', '11', TO_DATE('22/12/2021', 'DD/MM/YYYY'), '20:16:26', '21:16:26', '3');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (55, '7', '7', '1', TO_DATE('01/01/2022', 'DD/MM/YYYY'), '20:47:07', '21:47:07', '1');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (56, '8', '8', '10', TO_DATE('29/10/2021', 'DD/MM/YYYY'), '21:03:40', '22:03:40', '2');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (57, '9', '9', '6', TO_DATE('12/05/2022', 'DD/MM/YYYY'), '19:12:35', '20:12:35', '3');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (58, '10', '10', '5', TO_DATE('12/01/2022', 'DD/MM/YYYY'), '23:08:59', '00:08:59', '1');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (59, '11', '11', '12', TO_DATE('25/03/2022', 'DD/MM/YYYY'), '23:18:45', '23:18:45', '2');
+
+INSERT INTO Partidos (idPartido, idEstadio, idEquipoLocal, idEquipoVisitante, fechaRealización, horaIniciación, horaFinalización, idFase)
+VALUES (60, '12', '12', '2', TO_DATE('04/01/2022', 'DD/MM/YYYY'), '22:19:25', '23:19:25', '3');
 
 CREATE TABLE ParticipacionesÁrbitros (
 	idPartido INTEGER NOT NULL,
@@ -927,81 +1095,83 @@ FOREIGN KEY (idPosición) REFERENCES Posiciones(idPosición),
 FOREIGN KEY (idEquipo) REFERENCES Equipos(idEquipo)
 );
 
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (27, 48, '03/06/2000', 186, 130.1, '03/06/2019', null, '12', '5', '1', '1');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (28, 59, '18/06/1997', 218, 87.3, '18/06/2016', null, '6', '25', '2', '2');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (29, 21, '06/02/2001', 199, 147.4, '06/02/2020', null, '7', '21', '3', '3');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (30, 27, '28/08/1998', 199, 96.6, '28/08/2017', null, '1', '4', '4', '4');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (31, 46, '18/06/1997', 213, 84.0, '18/06/2016', null, '4', '2', '5', '5');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (32, 24, '10/05/2000', 191, 86.8, '10/05/2019', null, '8', '24', '1', '6');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (33, 22, '10/10/1997', 202, 93.4, '10/10/2016', null, '15', '27', '2', '7');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (34, 18, '17/12/1999', 193, 107.1, '17/12/2018', null, '5', '18', '3', '8');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (35, 13, '18/06/2002', 201, 97.5, '18/06/2021', null, '9', '9', '4', '9');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (36, 19, '03/06/1998', 193, 103.7, '03/06/2017', null, '3', '6', '5', '10');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (37, 40, '04/03/1999', 187, 148.6, '04/03/2018', null, '13', '28', '1', '11');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (38, 33, '06/02/1998', 193, 91.5, '06/02/2017', null, '14', '12', '2', '12');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (39, 42, '30/10/2000', 211, 128.1, '30/10/2019', null, '10', '22', '3', '1');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (40, 55, '29/03/2002', 195, 147.9, '29/03/2021', null, '11', '26', '4', '2');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (41, 17, '12/03/2001', 193, 140.3, '12/03/2020', null, '2', '20', '5', '3');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (42, 51, '27/03/2001', 183, 116.4, '27/03/2020', null, '2', '30', '1', '4');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (43, 50, '24/05/2002', 216, 150.0, '24/05/2021', null, '10', '16', '2', '5');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (44, 54, '02/08/2000', 185, 131.4, '02/08/2019', null, '12', '13', '3', '6');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (45, 36, '18/06/1998', 189, 86.4, '18/06/2017', null, '15', '10', '4', '7');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (46, 16, '18/06/2002', 194, 96.2, '18/06/2021', null, '7', '19', '5', '8');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (47, 23, '09/06/2000', 195, 102.4, '09/06/2019', null, '3', '11', '1', '9');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (48, 27, '04/09/1999', 211, 128.7, '04/09/2018', null, '11', '23', '2', '10');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (49, 34, '16/02/1998', 208, 100.7, '16/02/2017', null, '6', '14', '3', '11');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (50, 15, '02/05/2001', 205, 143.9, '02/05/2020', null, '9', '1', '4', '12');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (51, 53, '26/10/1998', 205, 115.0, '26/10/2017', null, '1', '3', '5', '1');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (52, 45, '18/06/1999', 199, 84.7, '18/06/2018', null, '14', '7', '1', '2');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (53, 8, '19/06/1997', 216, 91.2, '19/06/2016', null, '8', '29', '2', '3');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (54, 55, '12/06/1998', 199, 154.9, '12/06/2017', null, '5', '17', '3', '4');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (55, 23, '07/04/2001', 202, 143.7, '07/04/2020', null, '13', '15', '4', '5');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (56, 6, '15/11/2000', 200, 136.9, '15/11/2019', null, '4', '8', '5', '6');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (57, 11, '25/06/2000', 184, 137.3, '25/06/2019', null, '12', '9', '1', '7');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (58, 57, '17/06/2000', 205, 110.7, '17/06/2019', null, '2', '12', '2', '8');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (59, 11, '21/05/1999', 194, 143.5, '21/05/2018', null, '1', '19', '3', '9');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (60, 4, '17/08/2000', 205, 81.2, '17/08/2019', null, '8', '14', '4', '10');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (61, 7, '28/09/2001', 214, 132.4, '28/09/2020', null, '5', '20', '5', '11');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (62, 22, '28/02/2001', 205, 92.5, '28/02/2020', null, '7', '17', '1', '12');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (63, 10, '18/03/2002', 217, 154.0, '18/03/2021', null, '9', '26', '2', '1');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (64, 10, '18/06/1997', 213, 98.0, '18/06/2016', null, '11', '7', '3', '2');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (65, 38, '30/05/2001', 198, 113.8, '30/05/2020', null, '4', '22', '4', '3');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (66, 39, '18/06/1999', 190, 95.3, '18/06/2018', null, '6', '2', '5', '4');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (67, 40, '04/09/2000', 219, 158.2, '04/09/2019', null, '3', '10', '1', '5');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (68, 36, '13/03/2001', 200, 81.6, '13/03/2020', null, '14', '24', '2', '6');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (69, 48, '23/05/2001', 189, 110.0, '23/05/2020', null, '15', '11', '3', '7');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (70, 13, '15/06/1998', 188, 140.9, '15/06/2017', null, '10', '16', '4', '8');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (71, 7, '22/12/2000', 205, 89.1, '22/12/2019', null, '13', '5', '5', '9');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (72, 17, '25/08/1998', 215, 108.5, '25/08/2017', null, '1', '21', '1', '10');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (73, 5, '07/06/2002', 212, 106.7, '07/06/2021', null, '12', '30', '2', '11');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (74, 29, '21/08/1997', 194, 105.5, '21/08/2016', null, '6', '18', '3', '12');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (75, 18, '27/08/2000', 204, 124.8, '27/08/2019', null, '7', '25', '4', '1');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (76, 8, '17/02/1999', 196, 159.6, '17/02/2018', null, '14', '6', '5', '2');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (77, 12, '27/05/2001', 211, 89.6, '27/05/2020', null, '11', '23', '1', '3');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (78, 51, '26/08/2000', 208, 127.1, '26/08/2019', null, '2', '27', '2', '4');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (79, 27, '18/06/2001', 186, 151.6, '18/06/2020', null, '3', '29', '3', '5');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (80, 3, '02/03/2000', 199, 123.7, '02/03/2019', null, '4', '4', '4', '6');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (81, 50, '15/09/2000', 212, 134.5, '15/09/2019', null, '5', '3', '5', '7');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (82, 40, '02/04/1999', 204, 97.8, '02/04/2018', null, '13', '1', '1', '8');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (83, 14, '15/01/2000', 217, 137.7, '15/01/2019', null, '9', '15', '2', '9');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (84, 58, '14/10/1997', 219, 89.8, '14/10/2016', null, '8', '8', '3', '10');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (85, 60, '10/10/2000', 189, 100.8, '10/10/2019', null, '10', '28', '4', '11');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (86, 3, '18/03/2002', 203, 160.7, '18/03/2021', null, '15', '13', '5', '12');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (88, 16, '20/09/2000', 219, 94.7, '20/09/2019', '21/07/2022', '15', '12', '1', '1');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (89, 52, '23/01/1998', 188, 101.6, '23/01/2017', '02/11/2022', '14', '25', '2', '2');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (90, 33, '13/07/2001', 187, 131.2, '13/07/2020', '05/10/2022', '1', '18', '3', '3');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (91, 37, '27/06/1999', 188, 84.8, '27/06/2018', '10/04/2022', '2', '13', '4', '4');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (92, 26, '31/08/2000', 214, 83.8, '31/08/2019', '08/09/2021', '8', '8', '5', '5');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (93, 33, '18/06/1997', 199, 157.0, '18/06/2016', '06/11/2022', '9', '14', '1', '6');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (94, 12, '21/07/1997', 183, 109.4, '21/07/2016', '10/07/2022', '10', '5', '2', '7');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (95, 10, '18/06/2001', 203, 135.2, '18/06/2020', '06/05/2022', '13', '2', '3', '8');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (96, 5, '03/09/1997', 215, 121.2, '03/09/2016', '26/12/2021', '7', '28', '4', '9');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (97, 18, '26/05/2002', 211, 154.3, '26/05/2021', '20/01/2022', '5', '26', '5', '10');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (98, 47, '18/06/2000', 200, 96.0, '18/06/2019', '01/06/2022', '6', '4', '1', '11');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (99, 19, '08/09/1997', 197, 93.6, '08/09/2016', '18/04/2022', '3', '9', '2', '12');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (100, 14, '17/08/1998', 205, 158.1, '17/08/2017', '19/09/2021', '11', '20', '3', '1');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (101, 22, '06/05/2000', 190, 124.6, '06/05/2019', '17/06/2022', '4', '29', '4', '2');
-INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (102, 23, '15/06/1999', 191, 159.3, '15/06/2018', '26/07/2022', '12', '22', '5', '3');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (27, 48, TO_DATE('06/03/2000', 'DD/MM/YYYY'), 186, 130.1, TO_DATE('06/03/2019', 'DD/MM/YYYY'), null, '12', '5', '1', '1');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (28, 59, TO_DATE('18/06/1997', 'DD/MM/YYYY'), 218, 87.3, TO_DATE('18/06/2016', 'DD/MM/YYYY'), null, '6', '25', '2', '2');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (29, 21, TO_DATE('02/06/2001', 'DD/MM/YYYY'), 199, 147.4, TO_DATE('02/06/2020', 'DD/MM/YYYY'), null, '7', '21', '3', '3');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (30, 27, TO_DATE('08/22/1999', 'MM/DD/YYYY'), 199, 96.6, TO_DATE('08/28/2017', 'MM/DD/YYYY'), null, '1', '4', '4', '4');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (31, 46, TO_DATE('06/18/1997', 'MM/DD/YYYY'), 213, 84.0, TO_DATE('06/18/2016', 'MM/DD/YYYY'), null, '4', '2', '5', '5');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (32, 24, TO_DATE('05/10/2000', 'MM/DD/YYYY'), 191, 86.8, TO_DATE('05/10/2019', 'MM/DD/YYYY'), null, '8', '24', '1', '6');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (33, 22, TO_DATE('10/10/1997', 'MM/DD/YYYY'), 202, 93.4, TO_DATE('10/10/2016', 'MM/DD/YYYY'), null, '15', '27', '2', '7');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (34, 18, TO_DATE('12/17/1999', 'MM/DD/YYYY'), 193, 107.1, TO_DATE('12/17/2018', 'MM/DD/YYYY'), null, '5', '18', '3', '8');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (35, 13, TO_DATE('06/18/2002', 'MM/DD/YYYY'), 201, 97.5, TO_DATE('06/18/2021', 'MM/DD/YYYY'), null, '9', '9', '4', '9');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (36, 19, TO_DATE('06/03/1998', 'MM/DD/YYYY'), 193, 103.7, TO_DATE('06/03/2017', 'MM/DD/YYYY'), null, '3', '6', '5', '10');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (37, 40, TO_DATE('04/03/1999', 'MM/DD/YYYY'), 187, 148.6, TO_DATE('04/03/2018', 'MM/DD/YYYY'), null, '13', '28', '1', '11');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (38, 33, TO_DATE('06/02/1998', 'MM/DD/YYYY'), 193, 91.5, TO_DATE('06/02/2017', 'MM/DD/YYYY'), null, '14', '12', '2', '12');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (39, 42, TO_DATE('30/10/2000', 'DD/MM/YYYY'), 211, 128.1, TO_DATE('30/10/2019', 'DD/MM/YYYY'), null, '10', '22', '3', '1');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (40, 55, TO_DATE('29/03/2002', 'DD/MM/YYYY'), 195, 147.9, TO_DATE('29/03/2021', 'DD/MM/YYYY'), null, '11', '26', '4', '2');
+
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (41, 17, TO_DATE('12/03/2001', 'DD/MM/YYYY'), 193, 140.3, TO_DATE('12/03/2020', 'DD/MM/YYYY'), null, '2', '20', '5', '3');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (42, 51, TO_DATE('27/03/2001', 'DD/MM/YYYY'), 183, 116.4, TO_DATE('27/03/2020', 'DD/MM/YYYY'), null, '2', '30', '1', '4');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (43, 50, TO_DATE('24/05/2002', 'DD/MM/YYYY'), 216, 150.0, TO_DATE('24/05/2021', 'DD/MM/YYYY'), null, '10', '16', '2', '5');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (44, 54, TO_DATE('02/08/2000', 'DD/MM/YYYY'), 185, 131.4, TO_DATE('02/08/2019', 'DD/MM/YYYY'), null, '12', '13', '3', '6');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (45, 36, TO_DATE('18/06/1998', 'DD/MM/YYYY'), 189, 86.4, TO_DATE('18/06/2017', 'DD/MM/YYYY'), null, '15', '10', '4', '7');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (46, 16, TO_DATE('18/06/2002', 'DD/MM/YYYY'), 194, 96.2, TO_DATE('18/06/2021', 'DD/MM/YYYY'), null, '7', '19', '5', '8');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (47, 23, TO_DATE('09/06/2000', 'DD/MM/YYYY'), 195, 102.4, TO_DATE('09/06/2019', 'DD/MM/YYYY'), null, '3', '11', '1', '9');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (48, 27, TO_DATE('04/09/1999', 'DD/MM/YYYY'), 211, 128.7, TO_DATE('04/09/2018', 'DD/MM/YYYY'), null, '11', '23', '2', '10');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (49, 34, TO_DATE('16/02/1998', 'DD/MM/YYYY'), 208, 100.7, TO_DATE('16/02/2017', 'DD/MM/YYYY'), null, '6', '14', '3', '11');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (50, 15, TO_DATE('02/05/2001', 'DD/MM/YYYY'), 205, 143.9, TO_DATE('02/05/2020', 'DD/MM/YYYY'), null, '9', '1', '4', '12');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (51, 53, TO_DATE('26/10/1998', 'DD/MM/YYYY'), 205, 115.0, TO_DATE('26/10/2017', 'DD/MM/YYYY'), null, '1', '3', '5', '1');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (52, 45, TO_DATE('18/06/1999', 'DD/MM/YYYY'), 199, 84.7, TO_DATE('18/06/2018', 'DD/MM/YYYY'), null, '14', '7', '1', '2');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (53, 8, TO_DATE('19/06/1997', 'DD/MM/YYYY'), 216, 91.2, TO_DATE('19/06/2016', 'DD/MM/YYYY'), null, '8', '29', '2', '3');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (54, 55, TO_DATE('12/06/1998', 'DD/MM/YYYY'), 199, 154.9, TO_DATE('12/06/2017', 'DD/MM/YYYY'), null, '5', '17', '3', '4');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (55, 23, TO_DATE('07/04/2001', 'DD/MM/YYYY'), 202, 143.7, TO_DATE('07/04/2020', 'DD/MM/YYYY'), null, '13', '15', '4', '5');
+
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (56, 6, TO_DATE('15/11/2000', 'DD/MM/YYYY'), 200, 136.9, TO_DATE('15/11/2019', 'DD/MM/YYYY'), null, '4', '8', '5', '6');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (57, 11, TO_DATE('25/06/2000', 'DD/MM/YYYY'), 184, 137.3, TO_DATE('25/06/2019', 'DD/MM/YYYY'), null, '12', '9', '1', '7');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (58, 57, TO_DATE('17/06/2000', 'DD/MM/YYYY'), 205, 110.7, TO_DATE('17/06/2019', 'DD/MM/YYYY'), null, '2', '12', '2', '8');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (59, 11, TO_DATE('21/05/1999', 'DD/MM/YYYY'), 194, 143.5, TO_DATE('21/05/2018', 'DD/MM/YYYY'), null, '1', '19', '3', '9');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (60, 4, TO_DATE('17/08/2000', 'DD/MM/YYYY'), 205, 81.2, TO_DATE('17/08/2019', 'DD/MM/YYYY'), null, '8', '14', '4', '10');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (61, 7, TO_DATE('28/09/2001', 'DD/MM/YYYY'), 214, 132.4, TO_DATE('28/09/2020', 'DD/MM/YYYY'), null, '5', '20', '5', '11');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (62, 22, TO_DATE('28/02/2001', 'DD/MM/YYYY'), 205, 92.5, TO_DATE('28/02/2020', 'DD/MM/YYYY'), null, '7', '17', '1', '12');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (63, 10, TO_DATE('18/03/2002', 'DD/MM/YYYY'), 217, 154.0, TO_DATE('18/03/2021', 'DD/MM/YYYY'), null, '9', '26', '2', '1');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (64, 10, TO_DATE('18/06/1997', 'DD/MM/YYYY'), 213, 98.0, TO_DATE('18/06/2016', 'DD/MM/YYYY'), null, '11', '7', '3', '2');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (65, 38, TO_DATE('30/05/2001', 'DD/MM/YYYY'), 198, 113.8, TO_DATE('30/05/2020', 'DD/MM/YYYY'), null, '4', '22', '4', '3');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (66, 39, TO_DATE('18/06/1999', 'DD/MM/YYYY'), 190, 95.3, TO_DATE('18/06/2018', 'DD/MM/YYYY'), null, '6', '2', '5', '4');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (67, 40, TO_DATE('04/09/2000', 'DD/MM/YYYY'), 219, 158.2, TO_DATE('04/09/2019', 'DD/MM/YYYY'), null, '3', '10', '1', '5');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (68, 36, TO_DATE('13/03/2001', 'DD/MM/YYYY'), 200, 81.6, TO_DATE('13/03/2020', 'DD/MM/YYYY'), null, '14', '24', '2', '6');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (69, 48, TO_DATE('23/05/2001', 'DD/MM/YYYY'), 189, 110.0, TO_DATE('23/05/2020', 'DD/MM/YYYY'), null, '15', '11', '3', '7');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (70, 13, TO_DATE('15/06/1998', 'DD/MM/YYYY'), 188, 140.9, TO_DATE('15/06/2017', 'DD/MM/YYYY'), null, '10', '16', '4', '8');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (71, 7, TO_DATE('22/12/2000', 'DD/MM/YYYY'), 205, 89.1, TO_DATE('22/12/2019', 'DD/MM/YYYY'), null, '13', '5', '5', '9');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (72, 17, TO_DATE('25/08/1998', 'DD/MM/YYYY'), 215, 108.5, TO_DATE('25/08/2017', 'DD/MM/YYYY'), null, '1', '21', '1', '10');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (73, 5, TO_DATE('07/06/2002', 'DD/MM/YYYY'), 212, 106.7, TO_DATE('07/06/2021', 'DD/MM/YYYY'), null, '12', '30', '2', '11');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (74, 29, TO_DATE('21/08/1997', 'DD/MM/YYYY'), 194, 105.5, TO_DATE('21/08/2016', 'DD/MM/YYYY'), null, '6', '18', '3', '12');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (75, 18, TO_DATE('27/08/2000', 'DD/MM/YYYY'), 204, 124.8, TO_DATE('27/08/2019', 'DD/MM/YYYY'), null, '7', '25', '4', '1');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (76, 8, TO_DATE('17/02/1999', 'DD/MM/YYYY'), 196, 159.6, TO_DATE('17/02/2018', 'DD/MM/YYYY'), null, '14', '6', '5', '2');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (77, 12, TO_DATE('27/05/2001', 'DD/MM/YYYY'), 211, 89.6, TO_DATE('27/05/2020', 'DD/MM/YYYY'), null, '11', '23', '1', '3');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (78, 51, TO_DATE('26/08/2000', 'DD/MM/YYYY'), 208, 127.1, TO_DATE('26/08/2019', 'DD/MM/YYYY'), null, '2', '27', '2', '4');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (79, 27, TO_DATE('18/06/2001', 'DD/MM/YYYY'), 186, 151.6, TO_DATE('18/06/2020', 'DD/MM/YYYY'), null, '3', '29', '3', '5');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES  (80, 3, TO_DATE('02/03/2000', 'DD/MM/YYYY'), 199, 123.7, TO_DATE('02/03/2019', 'DD/MM/YYYY'), null, '4', '4', '4', '6');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (81, 50, TO_DATE('15/09/2000', 'DD/MM/YYYY'), 212, 134.5, TO_DATE('15/09/2019', 'DD/MM/YYYY'), null, '5', '3', '5', '7');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (82, 40, TO_DATE('02/04/1999', 'DD/MM/YYYY'), 204, 97.8, TO_DATE('02/04/2018', 'DD/MM/YYYY'), null, '13', '1', '1', '8');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (83, 14, TO_DATE('15/01/2000', 'DD/MM/YYYY'), 217, 137.7, TO_DATE('15/01/2019', 'DD/MM/YYYY'), null, '9', '15', '2', '9');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (84, 58, TO_DATE('14/10/1997', 'DD/MM/YYYY'), 219, 89.8, TO_DATE('14/10/2016', 'DD/MM/YYYY'), null, '8', '8', '3', '10');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (85, 60, TO_DATE('10/10/2000', 'DD/MM/YYYY'), 189, 100.8, TO_DATE('10/10/2019', 'DD/MM/YYYY'), null, '10', '28', '4', '11');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (86, 3, TO_DATE('18/03/2002', 'DD/MM/YYYY'), 203, 160.7, TO_DATE('18/03/2021', 'DD/MM/YYYY'), null, '15', '13', '5', '12');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (88, 16, TO_DATE('20/09/2000', 'DD/MM/YYYY'), 219, 94.7, TO_DATE('20/09/2019', 'DD/MM/YYYY'), TO_DATE('21/07/2022', 'DD/MM/YYYY'), '15', '12', '1', '1');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (89, 52, TO_DATE('23/01/1998', 'DD/MM/YYYY'), 188, 101.6, TO_DATE('23/01/2017', 'DD/MM/YYYY'), TO_DATE('02/11/2022', 'DD/MM/YYYY'), '14', '25', '2', '2');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (90, 33, TO_DATE('13/07/2001', 'DD/MM/YYYY'), 187, 131.2, TO_DATE('13/07/2020', 'DD/MM/YYYY'), TO_DATE('05/10/2022', 'DD/MM/YYYY'), '1', '18', '3', '3');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (91, 37, TO_DATE('27/06/1999', 'DD/MM/YYYY'), 188, 84.8, TO_DATE('27/06/2018', 'DD/MM/YYYY'), TO_DATE('10/04/2022', 'DD/MM/YYYY'), '2', '13', '4', '4');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (92, 26, TO_DATE('31/08/2000', 'DD/MM/YYYY'), 214, 83.8, TO_DATE('31/08/2019', 'DD/MM/YYYY'), TO_DATE('08/09/2021', 'DD/MM/YYYY'), '8', '8', '5', '5');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (93, 33, TO_DATE('18/06/1997', 'DD/MM/YYYY'), 199, 157.0, TO_DATE('18/06/2016', 'DD/MM/YYYY'), TO_DATE('06/11/2022', 'DD/MM/YYYY'), '9', '14', '1', '6');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (94, 12, TO_DATE('21/07/1997', 'DD/MM/YYYY'), 183, 109.4, TO_DATE('21/07/2016', 'DD/MM/YYYY'), TO_DATE('10/07/2022', 'DD/MM/YYYY'), '10', '5', '2', '7');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (95, 10, TO_DATE('18/06/2001', 'DD/MM/YYYY'), 203, 135.2, TO_DATE('18/06/2020', 'DD/MM/YYYY'), TO_DATE('06/05/2022', 'DD/MM/YYYY'), '13', '2', '3', '8');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (96, 5, TO_DATE('03/09/1997', 'DD/MM/YYYY'), 215, 121.2, TO_DATE('03/09/2016', 'DD/MM/YYYY'), TO_DATE('26/12/2021', 'DD/MM/YYYY'), '7', '28', '4', '9');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (97, 18, TO_DATE('26/05/2002', 'DD/MM/YYYY'), 211, 154.3, TO_DATE('26/05/2021', 'DD/MM/YYYY'), TO_DATE('20/01/2022', 'DD/MM/YYYY'), '5', '26', '5', '10');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (98, 47, TO_DATE('18/06/2000', 'DD/MM/YYYY'), 200, 96.0, TO_DATE('18/06/2019', 'DD/MM/YYYY'), TO_DATE('01/06/2022', 'DD/MM/YYYY'), '6', '4', '1', '11');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (99, 19, TO_DATE('08/09/1997', 'DD/MM/YYYY'), 197, 93.6, TO_DATE('08/09/2016', 'DD/MM/YYYY'), TO_DATE('18/04/2022', 'DD/MM/YYYY'), '3', '9', '2', '12');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (100, 14, TO_DATE('17/08/1998', 'DD/MM/YYYY'), 205, 158.1, TO_DATE('17/08/2017', 'DD/MM/YYYY'), TO_DATE('19/09/2021', 'DD/MM/YYYY'), '11', '20', '3', '1');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (101, 22, TO_DATE('06/05/2000', 'DD/MM/YYYY'), 190, 124.6, TO_DATE('06/05/2019', 'DD/MM/YYYY'), TO_DATE('17/06/2022', 'DD/MM/YYYY'), '4', '29', '4', '2');
+INSERT INTO Jugadores (idPersona, dorsal, fechaDeNacimiento, altura, peso, fechaInicioCarreraProfesional, fechaRetiro, idInstituciónProcedencia, idCiudadNacimiento, idPosición, idEquipo) VALUES (102, 23, TO_DATE('15/06/1999', 'DD/MM/YYYY'), 191, 159.3, TO_DATE('15/06/2018', 'DD/MM/YYYY'), TO_DATE('26/07/2022', 'DD/MM/YYYY'), '12', '22', '5', '3');
 
 CREATE TABLE Patrocinios (
 	idPatrocinador INTEGER NOT NULL,
@@ -1101,21 +1271,21 @@ CREATE TABLE Traspasos (
 );
 
 
-INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES  (1, '3', '6', '11', '49', '08/02/2022');
-INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES  (2, '2', '4', '10', '72', '20/02/2022');
-INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES  (3, '1', '5', '8', '70', '27/10/2021');
-INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES  (4, '1', '12', '7', '57', '25/12/2021');
-INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES  (5, '2', '2', '9', '47', '30/12/2021');
-INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES  (6, '3', '9', '3', '53', '07/11/2021');
-INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES  (7, '3', '7', '10', '36', '22/12/2021');
-INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES  (8, '1', '1', '3', '77', '27/11/2021');
-INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES  (9, '2', '10', '5', '79', '22/05/2022');
-INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES  (10, '2', '3', '10', '84', '09/02/2022');
-INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES  (11, '1', '8', '12', '74', '19/04/2022');
-INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES  (12, '3', '11', '2', '28', '20/11/2021');
-INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES  (13, '2', '11', '2', '64', '29/11/2021');
-INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES  (14, '1', '4', '11', '73', '19/03/2022');
-INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES  (15, '3', '3', '5', '43', '12/11/2021');
+INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES (1, '3', '6', '11', '49', TO_DATE('08/02/2022', 'DD/MM/YYYY'));
+INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES (2, '2', '4', '10', '72', TO_DATE('20/02/2022', 'DD/MM/YYYY'));
+INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES (3, '1', '5', '8', '70', TO_DATE('27/10/2021', 'DD/MM/YYYY'));
+INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES (4, '1', '12', '7', '57', TO_DATE('25/12/2021', 'DD/MM/YYYY'));
+INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES (5, '2', '2', '9', '47', TO_DATE('30/12/2021', 'DD/MM/YYYY'));
+INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES (6, '3', '9', '3', '53', TO_DATE('07/11/2021', 'DD/MM/YYYY'));
+INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES (7, '3', '7', '10', '36', TO_DATE('22/12/2021', 'DD/MM/YYYY'));
+INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES (8, '1', '1', '3', '77', TO_DATE('27/11/2021', 'DD/MM/YYYY'));
+INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES (9, '2', '10', '5', '79', TO_DATE('22/05/2022', 'DD/MM/YYYY'));
+INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES (10, '2', '3', '10', '84', TO_DATE('09/02/2022', 'DD/MM/YYYY'));
+INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES (11, '1', '8', '12', '74', TO_DATE('19/04/2022', 'DD/MM/YYYY'));
+INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES (12, '3', '11', '2', '28', TO_DATE('20/11/2021', 'DD/MM/YYYY'));
+INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES (13, '2', '11', '2', '64', TO_DATE('29/11/2021', 'DD/MM/YYYY'));
+INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES (14, '1', '4', '11', '73', TO_DATE('19/03/2022', 'DD/MM/YYYY'));
+INSERT INTO Traspasos (idTraspaso, idTipoDeTraspaso, idEquipoQueRealiza, idEquipoQueAcepta, idJugador, fechaRealización) VALUES (15, '3', '3', '5', '43', TO_DATE('12/11/2021', 'DD/MM/YYYY'));
 
 
 CREATE TABLE PremiosJugadores (
@@ -1127,13 +1297,12 @@ CREATE TABLE PremiosJugadores (
 	FOREIGN KEY (idPremio) REFERENCES Premios(idPremio)
 );
 
-INSERT INTO PremiosJugadores (idJugador, idPremio, fechaDeRecibimiento) VALUES  ('42', '1', '23/11/2021');
-INSERT INTO PremiosJugadores (idJugador, idPremio, fechaDeRecibimiento) VALUES  ('37', '2', '07/06/2022');
-INSERT INTO PremiosJugadores (idJugador, idPremio, fechaDeRecibimiento) VALUES  ('67', '3', '14/06/2022');
-INSERT INTO PremiosJugadores (idJugador, idPremio, fechaDeRecibimiento) VALUES  ('52', '4', '27/01/2022');
-INSERT INTO PremiosJugadores (idJugador, idPremio, fechaDeRecibimiento) VALUES  ('39', '5', '11/11/2021');
-INSERT INTO PremiosJugadores (idJugador, idPremio, fechaDeRecibimiento) VALUES  ('71', '6', '08/12/2021');
-
+INSERT INTO PremiosJugadores (idJugador, idPremio, fechaDeRecibimiento) VALUES ('42', '1', TO_DATE('23/11/2021', 'DD/MM/YYYY'));
+INSERT INTO PremiosJugadores (idJugador, idPremio, fechaDeRecibimiento) VALUES ('37', '2', TO_DATE('07/06/2022', 'DD/MM/YYYY'));
+INSERT INTO PremiosJugadores (idJugador, idPremio, fechaDeRecibimiento) VALUES ('67', '3', TO_DATE('14/06/2022', 'DD/MM/YYYY'));
+INSERT INTO PremiosJugadores (idJugador, idPremio, fechaDeRecibimiento) VALUES ('52', '4', TO_DATE('27/01/2022', 'DD/MM/YYYY'));
+INSERT INTO PremiosJugadores (idJugador, idPremio, fechaDeRecibimiento) VALUES ('39', '5', TO_DATE('11/11/2021', 'DD/MM/YYYY'));
+INSERT INTO PremiosJugadores (idJugador, idPremio, fechaDeRecibimiento) VALUES ('71', '6', TO_DATE('08/12/2021', 'DD/MM/YYYY'));
 
 
 CREATE TABLE Anotaciones (
